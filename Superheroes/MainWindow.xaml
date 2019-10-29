@@ -23,7 +23,7 @@
             <Grid>
                 <Image Source="C:\users\alumno\desktop\hola.jpg"></Image> 
             </Grid>
-        </DockPanel>
+        </DockPanel> 
         
     </StackPanel>
 </Window>
