@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <StackPanel>
+    <Grid>
 
-        <DockPanel >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Stretch="Fill" Grid.Column="0" Grid.Row="0" Source="C:\users\alumno\desktop\hola.jpg"></Image>        
+
+        <StackPanel Grid.Column="1" Grid.Row="0" >
             <TextBlock>Nombre</TextBlock>
             <TextBox></TextBox>
             <TextBlock>Enemigo</TextBlock>
@@ -17,13 +28,13 @@
             <TextBlock>Foto</TextBlock>
             <TextBox></TextBox>
             <CheckBox>¿Vengador?</CheckBox>
-        </DockPanel>
-        
-        <DockPanel >
-            <Grid>
-                <Image Source="C:\users\alumno\desktop\hola.jpg"></Image> 
-            </Grid>
-        </DockPanel> 
-        
-    </StackPanel>
+            <Button>Editar</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <TextBlock>Nombre:</TextBlock>
+            <TextBlock>Enemigo:</TextBlock>
+            <TextBlock>¿Vengadores?</TextBlock>
+        </StackPanel>
+    </Grid>
 </Window>

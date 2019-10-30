@@ -15,17 +15,19 @@ namespace Superheroes
         public bool Vengador { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+        
+
+
+        public Superheroe()
+        {
+
+        }
 
         //La interrogacion se introduce para saber si el resultado de la propiedad es nulo.
         public void NotifyPropertyChanged(string propertyName)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
-        public Superheroe()
-        {
-        }        
 
         public static Superheroe GetSample()
         {
